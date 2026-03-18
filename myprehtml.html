@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" 
+    content="width = device-width,initial-scale=1.0">
+    <title>Bookkeeping Application</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+    
+<body class="wood-texture">
+ 
+   <div class="main-container"><h1 id="top">📅记账簿</h1> 
+    <hr>
+    <!--<p>这里有一些类别供你选择!
+    现在你可以点击他们开始记账了!
+    </p>-->
+    <div class="input-section">
+        <h3>新增记账</h3>
+        <input type="Date" id="Dateinput">
+        <h3>分类</h3>
+        <div class="Category-container" id="CategorySelector">
+            <div class="Category-item" onclick="selectCategory(this,'🍎饮食')">🍎饮食</div>
+            <div class="Category-item" onclick="selectCategory(this,'🛒日常')">🛒日常</div>
+            <div class="Category-item" onclick="selectCategory(this,'🚗交通')">🚗交通</div>
+            <div class="Category-item" onclick="selectCategory(this,'🎮娱乐')">🎮娱乐</div>
+            <div class="Category-item" onclick="selectCategory(this,'👫社交')">👫社交</div>
+            <div class="Category-item" onclick="selectCategory(this,'🚑医疗')">🚑医疗</div>
+            <div class="Category-item" onclick="selectCategory(this,'✏️学习')">✏️学习</div>
+            <div class="Category-item" onclick="selectCategory(this,'🔩其他')">🔩其他</div>
+        </div>
+        <h3>金额</h3>
+        <input type="number" id="Amountinput" placeholder="请输入金额">
+        <button id="Submitbutton"onclick="AddClickbutton()">记录一笔</button>
+    </div>
+    <hr>
+    <h3>记账明细</h3>
+    <div id="RecordList" class="record-list">
+    </div>
+    <div class="total-summary">
+        <span>总计：</span>
+        <span id="TotalAmount" class="total-price">¥0.00</span>
+    </div>
+    
+    <script src="script.js"></script>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <p>
+        Any question ? You can send an <a href="https://mail.qq.com/?cancel_login=true&from=session_timeout"
+        target="_blank">email</a> to me at ?
+    </p>
+    <p>
+        <a href="#top">jump to the top</a>
+    </p>
+</body>
+</html>

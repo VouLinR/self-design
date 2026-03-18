@@ -1,0 +1,233 @@
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffffff;
+    margin: 0;/*外间距*/
+    padding: 5px;/*内间距*/
+}
+
+.wood-texture {
+    background-image: 
+        /* 第一层：横向木纹线条 */
+        repeating-linear-gradient(90deg, transparent, transparent 2px, rgba(139,69,19,0.03) 2px, rgba(139,69,19,0.03) 4px),
+        /* 第二层：纵向细微纹理（宣纸感） */
+        repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(139,69,19,0.03) 2px, rgba(139,69,19,0.03) 4px);
+}
+
+.main-container{
+    text-align: center;
+    width: 100%;
+    max-width: 600px;
+}
+
+.Category-container{
+    display: flex;
+    flex-wrap: wrap;/*自动换行*/
+    justify-content: center;
+    gap: 10px;/*卡片间距*/
+    margin: 10px 0;
+}
+
+.Category-item{
+    padding: 20px 40px;
+    background-color: #ffffff;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    cursor: pointer;/*光标停留样式*/
+    transition: all 0.2s;
+}
+
+.Category-item.active{
+    background-color: #68c06d;
+    color: white;
+    border-color: #68c06d;
+    transform: scale(1.05,1.05);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.record-list{
+    width: 100%;
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}
+
+.record-card{
+    background-color: #e9ffe5;
+    border: 1px solid #c5c5c5;
+    border-radius: 6px;
+    padding: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;/*两端对齐*/
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);/*阴影*/
+}
+
+.card.left{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.card-category{
+    font-size:15px;
+    font-weight:bold;
+    color:#333;
+    margin-bottom: 5px;
+}
+
+.card-date{
+    font-size: 12px;
+    color:#333;
+    margin-bottom: 6px;
+}
+
+.card-right{
+    display:flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.card-amount{
+    font-size: 15px;
+    font-weight: bold;
+    color:#f44336;
+}
+
+.delete-button{
+    background-color: none;
+    cursor: pointer;
+    color:#ccc;
+    font-size: 12px;
+    border: none;
+    transition: transform 0.2s, color 0.2s;
+}
+
+.delete-button:hover{
+    color:#ff4d4d;
+}
+
+.total-summary{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+/*table{
+    margin: 20px auto;
+    width: 100%;
+    background-color: #f2f2f2;
+    text-align: center;
+}
+
+th{
+    background-color: #4CAF50;
+    color: white;
+    font-weight: bold;字体粗细
+    padding: 8px;
+    border: 1px solid #ddd;
+}
+
+td{
+    padding: 8px;
+    border: 1px solid #ddd;        
+    text-align: center;
+    color: #333;
+}*/
+
+#Dateinput,#Amountinput{
+    width: 100%;
+    max-width: 300px;
+    height: 50px;
+    padding: 0 10px;
+    margin: 5px 0;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    font-size: 15px;
+    outline: none;
+    transition: border-color 0.2s;
+    box-sizing: border-box;
+}
+
+#Submitbutton{
+    width: 100%;
+    max-width: 100px;
+    height: 50px;
+    background-color: #9ceda6;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    font-size: 15px;
+    cursor: pointer;
+    margin-top: 0px;
+    margin-bottom: 5px;
+    transition: background-color 0.2s;
+    margin-left: 10px;
+}
+
+#Submitbutton:hover{
+    background-color: #68c06d;
+    border-color: #68c06d;
+    transform: scale(1.05,1.05);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+h1{
+    color: #333;
+    margin-bottom:10px;
+    font-size: 36px;
+    text-align: left;
+}
+
+h3{
+    color: #333;
+    margin-bottom: 0px;
+    font-size: 18px;
+    text-align: left;
+}
+
+hr{
+    border: none;
+    border-top: 1px solid #e0e0e0;
+    margin: 5px 5px;
+}
+
+/*#AccountTable{
+    width: 580px;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-family: Arial,sans-serif; 
+}
+#AccountTable th{
+    background-color: #4CAF50;
+    color: white;
+    font-weight: bold;
+    padding: 8px;
+    border: 1px solid #ddd;
+} 
+#AccountTable td{
+   padding: 8px;
+    border: 1px solid #ddd;        
+    text-align: center;
+    color: #333;
+}
+#AccountTable tr:hover{
+    background-color: #f2f2f2;
+}
+
+.input-section{
+        width:550px;
+        background-color: #f2f2f2;
+        padding: 15px;
+        border-radius: 6px;
+        margin-bottom: 20px;
+}
+input,select,button{
+        padding:8px;
+        margin:8px;
+}*/
